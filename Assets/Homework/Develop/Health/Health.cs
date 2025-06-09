@@ -1,19 +1,19 @@
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health
 {
-    [SerializeField] private float maxHealth;
-
+    private float _maxHealth;
     private float _currentHealth;
 
-    public float Current => _currentHealth;
-    public float Max => maxHealth;
-    public bool IsAlive => _currentHealth > 0f;
-
-    private void Awake()
+    public Health(float maxHealth)
     {
+        _maxHealth = maxHealth;
         _currentHealth = maxHealth;
     }
+
+    public float Current => _currentHealth;
+    public float Max => _maxHealth;
+    public bool IsAlive => _currentHealth > 0f;
 
     public void TakeDamage(float damage)
     {
@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
         _currentHealth -= damage;
         _currentHealth = Mathf.Max(_currentHealth, 0f);
 
-        Debug.Log($"{gameObject.name} получил {damage} урона. Текущее здоровье: {_currentHealth}");
+        Debug.Log($"Получено {damage} урона. Текущее здоровье: {_currentHealth}");
 
         if (_currentHealth <= 0f)
         {
@@ -34,6 +34,6 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log($"{gameObject.name} умер.");
+        Debug.Log("Игрок умер.");
     }
 }

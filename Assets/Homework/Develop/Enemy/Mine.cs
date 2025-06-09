@@ -6,9 +6,8 @@ public class Mine : MonoBehaviour
     [SerializeField] private float explosionRadius;
     [SerializeField] private float explosionDelay;
     [SerializeField] private float damage;
-    [SerializeField] private GameObject explosionEffect;
 
-    [SerializeField] private AgentCharacterView _agentCharacterView;
+    [SerializeField] private GameObject explosionEffect;
 
     private bool _isTriggered = false;
     private float _timer = 0f;
@@ -37,7 +36,7 @@ public class Mine : MonoBehaviour
         if (_isTriggered)
             return;
 
-        if (other.TryGetComponent(out Health _))
+        if (other.GetComponent<AgentCharacter>() != null)
         {
             _isTriggered = true;
             _timer = 0f;
@@ -53,10 +52,9 @@ public class Mine : MonoBehaviour
 
         foreach (Collider hit in hits)
         {
-            if (hit.TryGetComponent(out Health health))
+            if (hit.TryGetComponent<AgentCharacter>(out var character))
             {
-                health.TakeDamage(damage);
-                _agentCharacterView.HasDamage();
+                character.TakeDamage(damage); 
             }
         }
 

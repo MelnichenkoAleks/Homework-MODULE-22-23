@@ -27,7 +27,7 @@ public class AgentCharacterController : Controller
 
     private void HandleMouseInput()
     {
-        if (_character.GetComponent<Health>() == null || !_character.GetComponent<Health>().IsAlive)
+        if (!_character.IsAlive)
             return;
 
         if (Input.GetMouseButtonDown(_leftMouseButton))

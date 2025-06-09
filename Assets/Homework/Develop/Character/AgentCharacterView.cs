@@ -7,18 +7,12 @@ public class AgentCharacterView : MonoBehaviour
     private readonly int IsDeadKey = Animator.StringToHash("IsDead");
 
     [SerializeField] private Animator _animator;
-
     [SerializeField] private AgentCharacter _character;
 
-    [SerializeField] private Health _health;
-
     private string injuredLayerName = "Injured Layer";
-
     private float injuredThreshold = 30f;
 
     private int _injuredLayerIndex = -1;
-
-    public bool IsInjured => _health.Current <= injuredThreshold;
 
     private void Awake()
     {
@@ -28,7 +22,7 @@ public class AgentCharacterView : MonoBehaviour
 
     private void Update()
     {
-        if (!_health.IsAlive)
+        if (!_character.IsAlive)
         {
             Deading();
             return;
@@ -47,27 +41,15 @@ public class AgentCharacterView : MonoBehaviour
         if (_injuredLayerIndex < 0)
             return;
 
-        float weight = (IsInjured) ? 1f : 0f;
+        float weight = (_character.CurrentHealth <= injuredThreshold) ? 1f : 0f;
         _animator.SetLayerWeight(_injuredLayerIndex, weight);
     }
 
-    private void StopRunning()
-    {
-        _animator.SetBool(IsRunningKey, false);
-    }
+    private void StopRunning() => _animator.SetBool(IsRunningKey, false);
 
-    private void StartRunning()
-    {
-        _animator.SetBool(IsRunningKey, true);
-    }
+    private void StartRunning() => _animator.SetBool(IsRunningKey, true);
 
-    public void HasDamage()
-    {
-        _animator.SetTrigger(IsDamageKey);
-    }
+    public void HasDamage() => _animator.SetTrigger(IsDamageKey);
 
-    private void Deading()
-    {
-        _animator.SetBool(IsDeadKey, true);
-    }
+    private void Deading() => _animator.SetBool(IsDeadKey, true);
 }

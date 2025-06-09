@@ -458,10 +458,9 @@ MonoBehaviour:
   detectionRadius: 2
   explosionRadius: 2
   explosionDelay: 1
-  damage: 25
+  damage: 33
   explosionEffect: {fileID: 2661466256319219044, guid: df2527528f389ce428023349503d76bf,
     type: 3}
-  _agentCharacterView: {fileID: 1517099252}
 --- !u!4 &211319298
 Transform:
   m_ObjectHideFlags: 0
@@ -1456,7 +1455,6 @@ GameObject:
   - component: {fileID: 846880052}
   - component: {fileID: 846880053}
   - component: {fileID: 846880054}
-  - component: {fileID: 846880055}
   - component: {fileID: 846880056}
   - component: {fileID: 846880057}
   m_Layer: 6
@@ -1517,21 +1515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec6541aa8a82d0045886c22fe2179d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _agentCharacterView: {fileID: 1517099252}
   _moveSpeed: 8
   _rotationSpeed: 900
---- !u!114 &846880055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846880050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c35e56c8dfe3c004cba65d6c20a5b61d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
+  _maxHealth: 100
 --- !u!54 &846880056
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1914,10 +1901,9 @@ MonoBehaviour:
   detectionRadius: 2
   explosionRadius: 2
   explosionDelay: 1
-  damage: 25
+  damage: 33
   explosionEffect: {fileID: 2661466256319219044, guid: df2527528f389ce428023349503d76bf,
     type: 3}
-  _agentCharacterView: {fileID: 1517099252}
 --- !u!1 &1272287169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,10 +1975,9 @@ MonoBehaviour:
   detectionRadius: 2
   explosionRadius: 2
   explosionDelay: 1
-  damage: 25
+  damage: 33
   explosionEffect: {fileID: 2661466256319219044, guid: df2527528f389ce428023349503d76bf,
     type: 3}
-  _agentCharacterView: {fileID: 1517099252}
 --- !u!1001 &1309161622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2147,10 +2132,9 @@ MonoBehaviour:
   detectionRadius: 2
   explosionRadius: 2
   explosionDelay: 1
-  damage: 25
+  damage: 33
   explosionEffect: {fileID: 2661466256319219044, guid: df2527528f389ce428023349503d76bf,
     type: 3}
-  _agentCharacterView: {fileID: 1517099252}
 --- !u!1 &1382136955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2327,10 +2311,9 @@ MonoBehaviour:
   detectionRadius: 2
   explosionRadius: 2
   explosionDelay: 1
-  damage: 25
+  damage: 33
   explosionEffect: {fileID: 2661466256319219044, guid: df2527528f389ce428023349503d76bf,
     type: 3}
-  _agentCharacterView: {fileID: 1517099252}
 --- !u!1 &1415936955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,10 +2503,9 @@ MonoBehaviour:
   detectionRadius: 2
   explosionRadius: 2
   explosionDelay: 1
-  damage: 25
+  damage: 33
   explosionEffect: {fileID: 2661466256319219044, guid: df2527528f389ce428023349503d76bf,
     type: 3}
-  _agentCharacterView: {fileID: 1517099252}
 --- !u!1 &1432810135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,7 +2874,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 1517099253}
   _character: {fileID: 846880054}
-  _health: {fileID: 846880055}
 --- !u!95 &1517099253 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 82a2914d8f86c62488456950c8330e38,
@@ -3372,10 +3353,9 @@ MonoBehaviour:
   detectionRadius: 2
   explosionRadius: 2
   explosionDelay: 1
-  damage: 25
+  damage: 33
   explosionEffect: {fileID: 2661466256319219044, guid: df2527528f389ce428023349503d76bf,
     type: 3}
-  _agentCharacterView: {fileID: 1517099252}
 --- !u!1 &1929886262
 GameObject:
   m_ObjectHideFlags: 0
