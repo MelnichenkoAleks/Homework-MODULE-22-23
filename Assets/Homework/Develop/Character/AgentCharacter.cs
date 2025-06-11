@@ -56,7 +56,7 @@ public class AgentCharacter : MonoBehaviour
     {
         _health.TakeDamage(amount);
 
-        _agentCharacterView.HasDamage();
+        _agentCharacterView.TakeDamage();
 
         if (!_health.IsAlive)
         {

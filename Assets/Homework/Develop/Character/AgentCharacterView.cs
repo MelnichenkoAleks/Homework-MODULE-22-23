@@ -49,7 +49,7 @@ public class AgentCharacterView : MonoBehaviour
 
     private void StartRunning() => _animator.SetBool(IsRunningKey, true);
 
-    public void HasDamage() => _animator.SetTrigger(IsDamageKey);
+    public void TakeDamage() => _animator.SetTrigger(IsDamageKey);
 
     private void Deading() => _animator.SetBool(IsDeadKey, true);
 }
